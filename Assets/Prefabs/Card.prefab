@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1443669485901811186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8627919252511528163}
+  - component: {fileID: 2837978891491925952}
+  - component: {fileID: 7563527515540557506}
+  - component: {fileID: 1105584271336840700}
+  - component: {fileID: 5948286519322496415}
+  m_Layer: 0
+  m_Name: Card
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8627919252511528163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443669485901811186}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2837978891491925952
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443669485901811186}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7afa5f59405d26745813a9b1ac20a375, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1295356233, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &7563527515540557506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443669485901811186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dbae912ac6a774bb80e6bfd291d7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faces:
+  - {fileID: -4511603153306194821, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1736455242, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -477785647, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 712496333, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -405660852, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -593634974, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 658662716, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 547582635, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1839983163, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1679820484, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1560753425, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 954124094, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1575130577, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1077007989, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -2815869, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 2019037265, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 101871517, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 2041822194, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1972698744, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1209216039, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 641852647, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 81788738, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -562031753, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 461729410, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -31418612, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 491810268, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 776677904, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 927194826, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 2087513536, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1424439705, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1598349273, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1895349572, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1612309515, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1614654831, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1399242774, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1504189435, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1038603327, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1420324323, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -413455006, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -705430760, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -832465169, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 2119645550, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -236449385, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 120610799, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1632136282, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1618541627, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1614173136, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1236158355, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 899317337, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1827378410, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: -1120052528, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  - {fileID: 1799854926, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  cardBack: {fileID: 1295356233, guid: 1a98492cc64d27c41b5fbc54fd6e5c49, type: 3}
+  cardIndex: 0
+--- !u!114 &1105584271336840700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443669485901811186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded25e2d72d3b1a47a7b2fe4543ad4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 1443669485901811186}
+--- !u!114 &5948286519322496415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443669485901811186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e077527b98c9e44689cce06ba5ef3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -1.9999515
+      outSlope: -1.9999515
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4999951
+      value: 0.000034037454
+      inSlope: -0.000019550323
+      outSlope: -0.000019550323
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.9999124
+      outSlope: 1.9999124
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 0.5
