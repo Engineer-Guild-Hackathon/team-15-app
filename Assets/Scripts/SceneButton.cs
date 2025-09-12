@@ -10,6 +10,11 @@ public class SceneButton : MonoBehaviour
 
     public void TitleScenebutton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void LevelScenebutton()
+    {
+        SceneManager.LoadScene("LevelScene");
     }
 }
