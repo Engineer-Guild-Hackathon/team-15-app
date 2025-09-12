@@ -47,6 +47,7 @@ public class DataManager : MonoBehaviour
     public List<WordlistClass> Load(string fileName)
     {
         filepath = Application.persistentDataPath + "/" + fileName;
+        if (!File.Exists(filepath)) using (FileStream fs = File.Create(filepath)) ;
         StreamReader reader = new StreamReader(filepath);
         List<WordlistClass> result = new List<WordlistClass>();
         List<string> TextData = new List<string>();
