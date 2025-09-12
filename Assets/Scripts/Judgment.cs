@@ -26,7 +26,7 @@ public class Judgment : MonoBehaviour
             GV.ConsecutiveCA = 0;
         }
         GV.WordCn++;
-        if (GV.WordCn < 5) AQ.askQuestion();
+        if (GV.WordCn < LevelVariable.WordList_.Count) AQ.askQuestion();
         else ASC.ansSumCal();
     }
 
