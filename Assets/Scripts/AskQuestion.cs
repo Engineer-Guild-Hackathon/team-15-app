@@ -25,8 +25,8 @@ public class AskQuestion : MonoBehaviour
         if (cS)
         {
             ConsecutiveCAText.text = "òAë±ê≥âêî: "+GV.ConsecutiveCA.ToString();
-            PofText.text = "ëÊ" + GV.Qn + "ñ‚";
-            NumText.text = "ÅyïiéåÅz" + LevelVariable.WordList_[GV.WordCn].PoF;
+            NumText.text = "ëÊ" + GV.Qn + "ñ‚";
+            PofText.text = "ÅyïiéåÅz" + LevelVariable.WordList_[GV.WordCn].PoF;
             if(LevelVariable.PF_ == "JtoS")
             {
                 QuestionText.text = LevelVariable.WordList_[GV.WordCn].Japanese;

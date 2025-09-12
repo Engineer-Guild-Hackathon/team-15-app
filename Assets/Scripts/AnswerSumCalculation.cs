@@ -23,10 +23,12 @@ public class AnswerSumCalculation : MonoBehaviour
         DM = GetComponent<DataManager>();
 
         double CArate = Mathf.Round((float)GV.CA / (float)(GV.Qn-1) * 1000f) / 10 ;
-        CArateText.text = CArate.ToString() + "%";
-        CAText.text = GV.CA.ToString();
-        QnText.text = (GV.Qn-1).ToString();
-        MAXConsecutiveCAText.text = "òAë±ê≥âêî: "+GV.MAX_CCA.ToString();
+        double TimeScore = GV.TimeScore;
+        CArateText.text = "ê≥âó¶: "+CArate.ToString() + "%";
+        CAText.text = "ê≥âêî: "+ GV.CA.ToString();
+        QnText.text = "ñ‚ëËêî: " + (GV.Qn-1).ToString();
+        TimeText.text = $"{TimeScore:0.0}";
+        MAXConsecutiveCAText.text = "ç≈çÇòAë±ê≥âêî: "+GV.MAX_CCA.ToString();
         GV.CArates.Add(CArate);
         DM.Save(GV.Mistakes, LevelVariable.GR_ + "MistakeWordlist.txt");
         DM.Save(GV.CArates, "/CArate.txt");
