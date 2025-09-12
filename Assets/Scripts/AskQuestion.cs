@@ -16,6 +16,11 @@ public class AskQuestion : MonoBehaviour
         IFM = GetComponent<InputFieldManager>();
         GV = GetComponent<GameVar>();
         bool cS = canShow(GV.WordCn);
+        while (!cS)
+        {
+            GV.WordCn++;
+            cS = canShow(GV.WordCn);
+        }
         if (cS)
         {
             PofText.text = "‘æ" + GV.Qn + "–â";
@@ -30,6 +35,7 @@ public class AskQuestion : MonoBehaviour
             }
             GV.Qn++;
         }
+
     }
 
     public bool canShow(int i) {

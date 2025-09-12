@@ -4,11 +4,14 @@ public class GameStart : MonoBehaviour
 {
     AskQuestion AQ;
     GameVar GV;
+    DataManager DM;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         AQ = GetComponent<AskQuestion>();
         GV = GetComponent<GameVar>();
+        DM = GetComponent<DataManager>();
+        GV.Mistakes = DM.Load(LevelVariable.GR_ + "MistakeWordlist.txt");
         AQ.askQuestion();
     }
 

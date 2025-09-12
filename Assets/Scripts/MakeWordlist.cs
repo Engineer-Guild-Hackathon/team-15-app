@@ -9,32 +9,45 @@ using Unity.VisualScripting;
 using System.IO.Enumeration;
 public class MakeWordlist : MonoBehaviour
 {
-    [SerializeField] TextAsset TextFile;
+    TextAsset TextFile;
     List<string> TextData = new List<string>();
     public WordlistClass WLC;
     private string FileName = "";
-
+    private string filepath;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if(LevelVariable.GR_ == "SG")
         {
-            if (LevelVariable.PF_ == "R") FileName = "SGMistakeWordlist";
-            else FileName = "2ãâWordlist";
+            FileName = "2ãâWordlist";
         }
         else
         {
-            if (LevelVariable.PF_ == "R") FileName = "PFGMistakeWordlist";
-            else FileName = "èÄ1ãâWordlist";
+            FileName = "èÄ1ãâWordlist";
         }
-        TextFile = Resources.Load(FileName, typeof(TextAsset)) as TextAsset;
-        StringReader reader = new StringReader(TextFile.text);
-
-        while (reader.Peek() != -1)
+        if (LevelVariable.PR_ == "R")
         {
-            string line = reader.ReadLine();
-            TextData.Add(line);
+            filepath = Application.persistentDataPath + "/" + LevelVariable.GR_ + "MistakeWordlist.txt";
+            Debug.Log(filepath);
+            StreamReader reader = new StreamReader(filepath);
+            while (reader.Peek() != -1)
+            {
+                string line = reader.ReadLine();
+                TextData.Add(line);
+            }
+            reader.Close();
         }
+        else
+        {
+            var tex = Resources.Load(FileName, typeof(TextAsset)) as TextAsset;
+            StringReader reader = new StringReader(tex.text);
+            while (reader.Peek() != -1)
+            {
+                string line = reader.ReadLine();
+                TextData.Add(line);
+            }
+        }
+
 
         int WordCount = TextData.Count/5;
         Debug.Log("WordCount = "  +  WordCount);

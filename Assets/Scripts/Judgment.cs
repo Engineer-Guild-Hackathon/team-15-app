@@ -20,7 +20,6 @@ public class Judgment : MonoBehaviour
         else
         {
             GV.InCA++;
-
             GV.Mistakes.Add(LevelVariable.WordList_[GV.WordCn]);
 
         }

@@ -3,10 +3,13 @@ using System.IO;
 using UnityEditor;
 using NUnit.Framework;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using UnityEngine.Scripting;
 
 public class DataManager : MonoBehaviour
 {
     string filepath;
+
 
     public void Save(List<int> data, string fileName)
     {
@@ -41,14 +44,26 @@ public class DataManager : MonoBehaviour
         wr.Close();
     }
 
-    /*
-    public CArateData Load(string path)
+    public List<WordlistClass> Load(string fileName)
     {
-        StreamReader rd = new StreamReader(path);
-        string json = rd.ReadToEnd();
-        rd.Close();
-
-        return JsonUtility.FromJson<CArateData>(json);
+        filepath = Application.persistentDataPath + "/" + fileName;
+        StreamReader reader = new StreamReader(filepath);
+        List<WordlistClass> result = new List<WordlistClass>();
+        List<string> TextData = new List<string>();
+        while (reader.Peek() != -1)
+        {
+            string line = reader.ReadLine();
+            Debug.Log(line);
+            TextData.Add(line);
+        }
+        reader.Close();
+        Debug.Log(TextData.Count);
+        for (int i = 0; i < TextData.Count; i += 5)
+        {
+            WordlistClass temp = new WordlistClass(TextData[i], TextData[i + 1], TextData[i + 2], TextData[i + 3], TextData[i + 4]);
+            result.Add(temp);
+        }
+        return result;
     }
-    */
+
 }
