@@ -9,6 +9,6 @@ public class GameVar : MonoBehaviour
     public int WordCn = 0;
     public List<double> CArates;
     public List<WordlistClass> Mistakes = new List<WordlistClass>();
-    public List<WordlistClass> RICA = new List<WordlistClass>();
+    public List<int> RICA = new List<int>();
     public List<int> CACounts = new List<int>();
 }

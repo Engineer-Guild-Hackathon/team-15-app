@@ -12,6 +12,7 @@ public class GameStart : MonoBehaviour
         GV = GetComponent<GameVar>();
         DM = GetComponent<DataManager>();
         GV.Mistakes = DM.Load(LevelVariable.GR_ + "MistakeWordlist.txt");
+        for(int i = 0; i < GV.Mistakes.Count ; i++) Debug.Log(GV.Mistakes[i].English);
         AQ.askQuestion();
     }
 

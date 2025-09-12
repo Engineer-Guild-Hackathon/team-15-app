@@ -53,11 +53,9 @@ public class DataManager : MonoBehaviour
         while (reader.Peek() != -1)
         {
             string line = reader.ReadLine();
-            Debug.Log(line);
             TextData.Add(line);
         }
         reader.Close();
-        Debug.Log(TextData.Count);
         for (int i = 0; i < TextData.Count; i += 5)
         {
             WordlistClass temp = new WordlistClass(TextData[i], TextData[i + 1], TextData[i + 2], TextData[i + 3], TextData[i + 4]);

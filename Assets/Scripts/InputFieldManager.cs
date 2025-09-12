@@ -16,7 +16,6 @@ public class InputFieldManager : MonoBehaviour
     {
         //InputFieldコンポーネントを取得
         inputField = GameObject.Find("InputField").GetComponent<TMP_InputField>();
-         
     }
 
 
@@ -25,7 +24,6 @@ public class InputFieldManager : MonoBehaviour
     {
         judgment = GetComponent<Judgment>();
         StartCoroutine("SomeCoroutine");
-
     }
 
     private IEnumerator SomeCoroutine()
