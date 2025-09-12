@@ -28,7 +28,6 @@ public class MakeWordlist : MonoBehaviour
         if (LevelVariable.PR_ == "R")
         {
             filepath = Application.persistentDataPath + "/" + LevelVariable.GR_ + "MistakeWordlist.txt";
-            Debug.Log(filepath);
             StreamReader reader = new StreamReader(filepath);
             while (reader.Peek() != -1)
             {

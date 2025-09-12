@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnsJS: 
+  judgment: {fileID: 0}
 --- !u!4 &547070
 Transform:
   m_ObjectHideFlags: 0
@@ -251,6 +252,7 @@ MonoBehaviour:
   QnText: {fileID: 1782717614}
   MAXConsecutiveCAText: {fileID: 1862397943}
   GameOverPanel: {fileID: 1491639782}
+  inputField: {fileID: 2003163187}
 --- !u!114 &547076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1238,7 @@ GameObject:
   - component: {fileID: 661332441}
   - component: {fileID: 661332440}
   m_Layer: 0
-  m_Name: 2_0
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1621,7 +1623,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 581, y: 432}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070428823
 MonoBehaviour:
@@ -1643,7 +1645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5F62\u5BB9\u8A5E\u30FB\u526F\u8A5E\u30FB\u305D\u306E\u4ED6"
+  m_text: "\u3010\u54C1\u8A5E\u3011\u5F62\u5BB9\u8A5E\u30FB\u526F\u8A5E\u30FB\u305D\u306E\u4ED6"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1542b2b15c30ae4bb4a4b42f433fa96, type: 2}
   m_sharedMaterial: {fileID: -2209095061087543214, guid: c1542b2b15c30ae4bb4a4b42f433fa96, type: 2}
@@ -1677,7 +1679,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1708,7 +1710,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -52.142334, y: 0, z: -6.7280273, w: 0}
+  m_margin: {x: -41.686188, y: 0, z: 9.26384, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2015,7 +2017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaa
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1542b2b15c30ae4bb4a4b42f433fa96, type: 2}
   m_sharedMaterial: {fileID: -2209095061087543214, guid: c1542b2b15c30ae4bb4a4b42f433fa96, type: 2}
@@ -2111,7 +2113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1491639783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2511,6 +2513,7 @@ GameObject:
   - component: {fileID: 2003163191}
   - component: {fileID: 2003163190}
   - component: {fileID: 2003163189}
+  - component: {fileID: 2003163192}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -2603,7 +2606,7 @@ MonoBehaviour:
       - m_Target: {fileID: 547069}
         m_TargetAssemblyTypeName: InputFieldManager, Assembly-CSharp
         m_MethodName: GetInputName
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2689,6 +2692,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003163187}
   m_CullTransparentMesh: 1
+--- !u!114 &2003163192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003163187}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6e89a5844b0c44e89b56fa5aec0832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnsJS: 
+  judgment: {fileID: 0}
 --- !u!1 &2040233713
 GameObject:
   m_ObjectHideFlags: 0

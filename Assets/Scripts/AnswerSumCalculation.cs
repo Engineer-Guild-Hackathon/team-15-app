@@ -1,8 +1,10 @@
-using UnityEngine;
+using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using Unity.VisualScripting;
-using System.Collections.Generic;
-
+using UnityEngine;
+using System;
+using System.Data;
 
 public class AnswerSumCalculation : MonoBehaviour
 {
@@ -14,9 +16,11 @@ public class AnswerSumCalculation : MonoBehaviour
     [SerializeField] TMP_Text QnText;
     [SerializeField] TMP_Text MAXConsecutiveCAText;
     [SerializeField] GameObject GameOverPanel;
+    [SerializeField] GameObject inputField;
 
     public void ansSumCal()
     {
+        inputField.SetActive(false);
         GameOverPanel.SetActive(true);
         GV = GetComponent<GameVar>();
         
@@ -42,5 +46,13 @@ public class AnswerSumCalculation : MonoBehaviour
             }
             DM.Save(ReMistakes, LevelVariable.GR_ + "MistakeWordlist.txt");
         }
+
+        string filepath = Application.persistentDataPath + "/Results.txt";
+        if (!File.Exists(filepath)) using (FileStream fs = File.Create(filepath)) ;
+        StreamWriter wr = new StreamWriter(filepath, true);
+        DateTime dateTime = DateTime.Now;
+        string TimeString = dateTime.Year.ToString() + "/" + dateTime.Month.ToString() + "/" + dateTime.Day.ToString() + "/" + dateTime.ToLongTimeString();
+        wr.WriteLine(TimeString + "," + LevelVariable.GR_ + "," + LevelVariable.PF_ + "," + LevelVariable.PR_ + "," + GV.Qn + "," + GV.CA + "," + CArate + "," + GV.MAX_CCA + "," + $"{TimeScore:0.0}");
+        wr.Close();
     }
 }
