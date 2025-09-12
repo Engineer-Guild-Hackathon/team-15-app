@@ -19,11 +19,13 @@ public class MakeWordlist : MonoBehaviour
     {
         if(LevelVariable.GR_ == "SG")
         {
-            FileName = "2‹‰Wordlist";
+            if (LevelVariable.PF_ == "R") FileName = "SGMistakeWordlist";
+            else FileName = "2‹‰Wordlist";
         }
         else
         {
-            FileName = "€1‹‰Wordlist";
+            if (LevelVariable.PF_ == "R") FileName = "PFGMistakeWordlist";
+            else FileName = "€1‹‰Wordlist";
         }
         TextFile = Resources.Load(FileName, typeof(TextAsset)) as TextAsset;
         StringReader reader = new StringReader(TextFile.text);

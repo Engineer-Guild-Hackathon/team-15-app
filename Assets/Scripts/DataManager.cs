@@ -1,30 +1,47 @@
 using UnityEngine;
 using System.IO;
 using UnityEditor;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 public class DataManager : MonoBehaviour
 {
-    [HideInInspector] public CArateData data;
     string filepath;
-    string fileName = "CArate.json";
-    private void Awake()
+
+    public void Save(List<int> data, string fileName)
     {
         filepath = Application.persistentDataPath + "/" + fileName;
-        if (!File.Exists(filepath))
-        {
-            Save(data);
-        }
-
-        data = Load(filepath);
-    }
-
-    public void Save(CArateData data)
-    {
-        string json = JsonUtility.ToJson(data);
+        if (!File.Exists(filepath)) using (FileStream fs = File.Create(filepath)) ;
         StreamWriter wr = new StreamWriter(filepath,false);
-        wr.WriteLine(json);
+        foreach(int i in data) wr.WriteLine(i);
         wr.Close();
     }
+    public void Save(List<WordlistClass> data, string fileName)
+    {
+        filepath = Application.persistentDataPath + "/" + fileName;
+        if (!File.Exists(filepath)) using (FileStream fs = File.Create(filepath)) ;
+        StreamWriter wr = new StreamWriter(filepath, false);
+        foreach (WordlistClass i in data)
+        {
+            wr.WriteLine(i.PoF);
+            wr.WriteLine(i.Rank);
+            wr.WriteLine(i.English);
+            wr.WriteLine(i.Japanese);
+            wr.WriteLine(i.Number);
+        }
+        wr.Close();
+    }
+
+    public void Save(List<double> data, string fileName)
+    {
+        filepath = Application.persistentDataPath + "/" + fileName;
+        if (!File.Exists(filepath)) using (FileStream fs = File.Create(filepath)) ;
+        StreamWriter wr = new StreamWriter(filepath, false);
+        foreach (double i in data) wr.WriteLine(i);
+        wr.Close();
+    }
+
+    /*
     public CArateData Load(string path)
     {
         StreamReader rd = new StreamReader(path);
@@ -33,9 +50,5 @@ public class DataManager : MonoBehaviour
 
         return JsonUtility.FromJson<CArateData>(json);
     }
-
-    private void OnDestroy()
-    {
-        Save(data);
-    }
+    */
 }

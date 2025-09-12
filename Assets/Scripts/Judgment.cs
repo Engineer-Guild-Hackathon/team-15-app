@@ -5,15 +5,12 @@ public class Judgment : MonoBehaviour
     GameVar GV;
     AskQuestion AQ;
     AnswerSumCalculation ASC;
-    SGMistakeWordlist SGMW;
-    MistakeWordDataManager MWDM;
 
     public void JudgmentQuestion(string Ans)
     {
         GV = GetComponent<GameVar>();
         AQ = GetComponent<AskQuestion>();
         ASC = GetComponent<AnswerSumCalculation>();
-        MWDM = GetComponent<MistakeWordDataManager>();
 
         if (Ans == LevelVariable.WordList_[GV.WordCn].English)
         {
@@ -24,7 +21,7 @@ public class Judgment : MonoBehaviour
         {
             GV.InCA++;
 
-            GV.SGMistakes.Add(LevelVariable.WordList_[GV.WordCn].English);
+            GV.Mistakes.Add(LevelVariable.WordList_[GV.WordCn]);
 
         }
         GV.WordCn++;
