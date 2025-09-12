@@ -9,6 +9,7 @@ public class AskQuestion : MonoBehaviour
     [SerializeField] TMP_Text PofText;
     [SerializeField] TMP_Text NumText;
     [SerializeField] TMP_Text QuestionText;
+    [SerializeField] TMP_Text ConsecutiveCAText;
     GameVar GV;
     InputFieldManager IFM;
     public void askQuestion()
@@ -23,6 +24,7 @@ public class AskQuestion : MonoBehaviour
         }
         if (cS)
         {
+            ConsecutiveCAText.text = "òAë±ê≥âêî: "+GV.ConsecutiveCA.ToString();
             PofText.text = "ëÊ" + GV.Qn + "ñ‚";
             NumText.text = "ÅyïiéåÅz" + LevelVariable.WordList_[GV.WordCn].PoF;
             if(LevelVariable.PF_ == "JtoS")

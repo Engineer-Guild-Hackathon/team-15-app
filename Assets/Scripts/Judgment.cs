@@ -16,12 +16,14 @@ public class Judgment : MonoBehaviour
         {
             GV.CA++;
             if(LevelVariable.PR_ == "R") GV.RICA.Add(GV.WordCn);
+            GV.ConsecutiveCA++;
+            if(GV.ConsecutiveCA > GV.MAX_CCA) GV.MAX_CCA = GV.ConsecutiveCA; 
         }
         else
         {
             GV.InCA++;
             if(DuplicateJudgment()) GV.Mistakes.Add(LevelVariable.WordList_[GV.WordCn]);
-
+            GV.ConsecutiveCA = 0;
         }
         GV.WordCn++;
         if (GV.WordCn < 5) AQ.askQuestion();

@@ -12,6 +12,7 @@ public class AnswerSumCalculation : MonoBehaviour
     [SerializeField] TMP_Text TimeText;
     [SerializeField] TMP_Text CAText;
     [SerializeField] TMP_Text QnText;
+    [SerializeField] TMP_Text MAXConsecutiveCAText;
     [SerializeField] GameObject GameOverPanel;
 
     public void ansSumCal()
@@ -25,12 +26,10 @@ public class AnswerSumCalculation : MonoBehaviour
         CArateText.text = CArate.ToString() + "%";
         CAText.text = GV.CA.ToString();
         QnText.text = (GV.Qn-1).ToString();
-
+        MAXConsecutiveCAText.text = "òAë±ê≥âêî: "+GV.MAX_CCA.ToString();
         GV.CArates.Add(CArate);
-        GV.CACounts.Add(GV.CA);
         DM.Save(GV.Mistakes, LevelVariable.GR_ + "MistakeWordlist.txt");
         DM.Save(GV.CArates, "/CArate.txt");
-        DM.Save(GV.CACounts, "/CACount.txt");
 
         if (LevelVariable.PR_ == "R")
         {

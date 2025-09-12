@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class GameStart : MonoBehaviour
@@ -5,6 +6,7 @@ public class GameStart : MonoBehaviour
     AskQuestion AQ;
     GameVar GV;
     DataManager DM;
+    [SerializeField] TMP_Text TimeScoreText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +21,7 @@ public class GameStart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GV.TimeScore += Time.deltaTime;
+        TimeScoreText.text = $"{GV.TimeScore:0.0}";
     }
 }
