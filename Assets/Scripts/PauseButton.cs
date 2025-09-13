@@ -2,9 +2,8 @@ using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
 
-public class PauseBtn : MonoBehaviour
+public class PauseButton : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel;
     AnswerSumCalculation ASC;
