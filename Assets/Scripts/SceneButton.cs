@@ -17,4 +17,23 @@ public class SceneButton : MonoBehaviour
     {
         SceneManager.LoadScene("LevelScene");
     }
+
+    public void ResultScenebutton()
+    {
+        SceneManager.LoadScene("ResultScene");
+    }
+
+    public void GraphScenebutton()
+    {
+        SceneManager.LoadScene("GraphScene");
+    }
+
+    public void EndGamebutton()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;//ゲームプレイ終了
+#else
+    Application.Quit();//ゲームプレイ終了
+#endif
+    }
 }

@@ -3,6 +3,8 @@ using UnityEngine;
 public class PanelBtn : MonoBehaviour
 {
     [SerializeField] GameObject[] Groups;
+    [SerializeField] GameObject PFPanel;
+    [SerializeField] GameObject PRPanel;
     int i = 0;
     public void RightBtn()
     {
@@ -20,4 +22,13 @@ public class PanelBtn : MonoBehaviour
         Groups[i].gameObject.SetActive(true);
     }
 
+    public void ReturnGRBtn()
+    {
+        PFPanel.SetActive(false);
+    }
+
+    public void ReturnPFBtn()
+    {
+        PRPanel.SetActive(false);
+    }
 }
