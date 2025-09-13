@@ -15,7 +15,7 @@
 ## デモ　/ プレゼン資料
 - デモURL: https://m.youtube.com/watch?v=_TAzixh3KdM&si=iNOZiBX3rG9zzrMB
 - プレゼンURL：https://drive.google.com/file/d/1uSBhk1elH_k4fakGfk5g7rWMRXR36BlC/view?usp=drive_link
-- 詳細
+- 詳細 : 
   このプロダクトは英検合格を目指す方、英検対策をきっかけに英単語を学習したい方を想定ユーザーとした英単語学習アプリLexiconiaです。
   Startボタンをクリックすると学習対象とする級を選択する画面になり、選択後は英単語のスペル対策または4択の選択出題にするかを選択できます。
   Lexiconiaは既存の単語帳アプリと比較して、「日本語からスペル筆記」学習を特徴としており、従来の単語帳アプリの4択選択式も選択可能にすることで、Lexiconia1つで英単語の様々な学習を可能にしています。
