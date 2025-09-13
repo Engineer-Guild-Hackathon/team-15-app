@@ -7,11 +7,15 @@ using static UnityEditor.Progress;
 public class PauseBtn : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel;
+    AnswerSumCalculation ASC;
+
 
     public void BackToTitle()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("StartScene");
+        pausePanel.SetActive(false);
+        ASC = GetComponent<AnswerSumCalculation>();
+        ASC.ansSumCal();
     }
 
     public void ShowPausePanel()
